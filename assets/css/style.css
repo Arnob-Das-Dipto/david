@@ -1,0 +1,344 @@
+
+/* 
+    Template Name: Animated Portfolio Project
+    Author Name: Arnob Das Dipto
+    Description: Using HTML, CSS, JQUERY, JAVA-SCRIPT
+
+    Index 
+
+    ----
+    01. Reset CSS
+    02. Header CSS
+    03. Bannar CSS
+    04. About CSS
+    05. Services CSS
+    06. Projects CSS
+    07. Contact CSS
+    08. Footer CSS
+*/
+
+/* 01. Reset CSS */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: .3s;
+}
+ul {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+}
+body {
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #202020;
+}
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+.section-title {
+    margin-bottom: 60px;
+    text-align: center;
+    color: #fff;
+}
+.section-title h4 {
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 40px;
+    color: #ffbd36;
+    margin-bottom: 20px;
+}
+
+/* 02. Header CSS */
+.header-area {
+    padding: 25px 0;
+    transition: .3s;
+}
+.header-area.sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    background-color: #333;
+    padding: 20px 0;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+.logo {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 700;
+}
+.header ul {
+    display: flex;
+}
+.header ul.show {
+    display: block;
+}
+.header ul li {
+    margin: 0 15px;
+}
+.header ul li a {
+    text-transform: capitalize;
+    display: block;
+}
+.header ul li a.active {
+    color: #ffbd36;
+}
+.header ul li a:hover {
+    color: #ffbd36;
+}
+.menu-icon i {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+/* 03. Bannar CSS */
+.bannar-area {
+    padding: 80px 0;
+    background-position: center;
+    background-size: cover;
+}
+.bannar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+.bannar-content h5 {
+    font-size: 22px;
+    font-weight: 700;
+}
+.bannar-content h2 {
+    font-size: 50px;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+.bannar-content h2 span {
+    color: #ffbd36;
+}
+.bannar-content h4 {
+    font-size: 26px;
+}
+.bannar-content p {
+    max-width: 600px;
+    margin: 20px 0;
+}
+.btn {
+    display: inline-block;
+    background-color: #ffbd36;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    padding: 10px 20px;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+.btn:hover {
+    background-color: #333;
+    border-color: #ffbd36;
+    color: #ffbd36;
+}
+.bannar-img img {
+    background-color: #ffbd36;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+/* 04. About CSS */
+.about-area {
+    padding: 100px 0;
+    background-color: #2a2a2a;
+}
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-content {
+    flex-basis: 65%;
+}
+.about-content h4 {
+    color: #ffbd36;
+    font-size: 40px;
+    line-height: 70px;
+    text-transform: capitalize;
+}
+.about-content p{
+    color: #fff;
+    margin-bottom: 10px;
+}
+.about-skills {
+    flex-basis: 30%;
+}
+.about-skills ul li {
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+.about-skills ul li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* 05. Services CSS */
+.services-area {
+    padding: 100px 0;
+    color: #fff;
+}
+.services {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.single-service {
+    background-color: #2a2a2a;
+    padding: 25px;
+    text-align: center;
+    flex-basis: 32%;
+    border: 2px solid transparent;
+    transition: .3s;
+}
+.single-service i {
+    background-color: #ffbd36;
+    width: 60px;
+    height: 60px;
+    color: #333;
+    font-size: 26px;
+    line-height: 60px;
+    border-radius: 50%;
+}
+.single-service h4 {
+    font-size: 26px;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+.single-service:hover {
+    border-color: #ffbd36;
+}
+
+/* 06. Projects CSS */
+.projects-area {
+    padding: 100px 0;
+    background-color: #333;
+}
+.projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.single-project {
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    flex-basis: 32%;
+    margin: 15px 0;
+}
+.project-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+.project-content:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #202020;
+    left: 0;
+    top: 0;
+    opacity: .75;
+    z-index: -1;
+}
+.project-content h4 {
+    font-size: 26px;
+    text-transform: capitalize;
+    text-align: center;
+}
+.project-content h4 span {
+    display: block;
+    font-size: 18px;
+    margin-top: 5px;
+}
+.single-project:hover .project-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 07. Contact CSS */
+.contact-area {
+    padding: 100px 0;
+}
+.contact {
+    max-width: 700px;
+    margin: auto;
+}
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    margin-bottom: 10px;
+}
+.contact input[type="submit"] {
+    width: auto;
+    background-color: #ffbd36;
+    padding: 10px 40px;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* 08. Footer CSS */
+.footer-area {
+    background-color: #2a2a2a;
+    padding: 60px 0;
+    text-align: center;
+}
+.footer-area a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+.footer-area a:hover {
+    border-color: #ffbd36;
+    color: #ffbd36;
+}
+.footer-area p {
+    margin-top: 20px;
+    text-transform: capitalize;
+    color: #fff;
+}
